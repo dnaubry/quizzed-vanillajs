@@ -1,0 +1,88 @@
+.quiz-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;  
+  overflow: auto;      
+  
+  background-color: rgba(255, 255, 255, .9);    
+  font-family: $font-main;
+  border-bottom: 1px solid $gray-dark;
+  
+  margin: 0;
+  padding: .5rem 0;
+
+  @mixin atSmall { 
+    display: block;         
+    overflow: visible;
+
+    background-color: transparent;
+    border-bottom: none;
+
+    margin: .52rem 0;
+    padding: 0;
+  }
+
+  @mixin atMedium {
+    margin: .53rem 0;
+  }
+
+  @mixin atLarge {
+    margin: .51rem 0;
+  }
+
+  .quiz-link {
+    display: inline;  
+    flex: none;
+    list-style: none;
+  
+    text-align: center;
+
+    margin-right: .15rem;
+    padding: 1rem .7rem;
+  
+    cursor: pointer;
+  
+    @mixin atSmall {
+      font-size: .9rem;
+
+      padding: .5rem .5rem;
+    }
+
+    @mixin atMedium {
+      font-size: 1rem;
+
+      padding: .5rem 1rem;
+    }
+
+    &:hover {
+      
+      @mixin atSmall {
+        color: $red;
+      }
+    }
+  
+      &.active {
+        font-weight: 700;
+  
+        cursor: default;      
+        pointer-events: none;
+        touch-action: none; 
+  
+        @mixin atSmall {
+          background-color: rgba(255, 255, 255, .9);
+        }
+      }
+  
+      &:not(.active) {
+        background-color: transparent;
+  
+        @mixin atSmall {
+            background-color: rgba($gray-medium, .9);
+        }
+      }
+  
+
+  
+
+  }
+}

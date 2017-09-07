@@ -1,0 +1,55 @@
+.btn-container {
+  position: relative;
+
+  text-align: center;
+
+  padding: 10px 0 30px 0;
+
+  @mixin atSmall {
+    margin: 15px 0;
+  }
+
+  .btn {
+      background-color: $gray-light;
+      color: $gray-dark;      
+      font-family: $font-header;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: 2px solid $gray-dark; 
+      transition: all 0.3s ease;           
+
+      padding: .8rem;
+      margin: 0px 15px;
+      width: 100px;
+
+      cursor: pointer;    
+
+      @mixin atSmall {
+        font-size: 1.5em;
+      }
+
+    &:hover {
+      background-color: $gray-dark;
+      color: $white;
+    }
+  }
+
+  .btn-link {
+    background-color: transparent;
+    color: $red;
+    font-family: inherit;
+    border: none;
+    border-bottom: 1px solid $white;
+
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 1px solid $red;
+    }
+    
+  }
+}
+
+

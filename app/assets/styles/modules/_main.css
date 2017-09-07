@@ -1,0 +1,9 @@
+.main{
+    background-color: $white;
+
+    padding: .7rem;
+
+    @mixin atSmall {
+        margin-bottom: 1rem;
+    }
+}

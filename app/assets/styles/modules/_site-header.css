@@ -1,0 +1,28 @@
+.site-header {
+  margin: 1.5rem 0 1.5rem;
+
+  @mixin atSmall {
+    padding: 1.5rem 2.5rem 1rem;
+  }
+
+  .title {
+    color: $gray-dark;    
+    font-family: $font-header;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid $red;    
+
+    margin: 0;
+    padding: 0;
+
+    @mixin atSmall {
+      font-size: 5rem;
+      letter-spacing: 6px;
+      text-align: left;
+      
+      padding-left: 0;
+    }
+  }
+}

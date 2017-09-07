@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quizzed</title>
+    
+    <!-- build:css assets/styles/styles.css -->
+    <link rel="stylesheet" href="temp/styles/styles.css">
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1 class="title">Quizzed</h1>
+    </header>
+    <div class="wrapper">
+      <nav>
+        <ul id="quiz-list" class="quiz-list"></ul>
+      </nav>
+      <main id="main" class="main">
+        <div id="quiz" class="quiz"></div>
+        <div id="btn-container" class="btn-container">
+            <button id="back" class="btn hidden">Back</button>
+            <button id="start" class="btn">Start</button>
+            <button id="next" class="btn hidden">Next</button>
+            <button id="retry" class="btn hidden">Retry</button>
+        </div>
+        <div id="validation" class="validation hidden">Please choose an answer</div>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p class="site-footer__text">
+        <a href="https://danielleaubry.com">danielleaubry.com</a>
+      </p>
+    </footer>
+  <!-- build:js assets/scripts/App.js -->
+  <script src="/temp/scripts/App.js"></script>
+  <!-- endbuild -->
+  </body>
+</html>

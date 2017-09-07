@@ -1,0 +1,149 @@
+.quiz {
+  color: gray-dark;
+
+  margin: 0 auto;
+  padding: 10px 20px; 
+  
+
+    @mixin atMedium {
+      width: 90%;
+    }
+
+    @mixin atLarge {
+      width: 70%;
+    }
+
+    @mixin atExtraLarge {
+      width: 50%;
+    }
+
+  .name {
+    font-family: $font-header;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+
+    @mixin atSmall {
+      font-size: 3.5em;
+    }
+  }
+
+  .quote {
+    text-align: center;
+  }
+
+  .quote-source {
+    font-weight: 700;
+    font-size: .9em;
+    text-align: right;
+  }
+
+  .count {
+    font-family: $font-header;
+    text-align: right;
+    border-bottom: .5px solid $gray-medium;
+
+    padding: .5rem;
+  }
+
+  .question {
+    font-family: $font-header;
+    font-size: 1.6em;
+    text-align: center;
+    text-transform: uppercase;
+
+    @mixin atSmall {
+      font-size: 2em;
+    }
+  }
+
+  .choice {
+      display: flex;
+      align-items: baseline;
+
+      font-size: .9em;
+
+      padding: .5rem 0;
+
+      &--label {
+        font-weight: 400;
+
+        margin: 0 auto;        
+        padding: 1rem;
+        width: 80%;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: $yellow;
+        }
+
+        @mixin atSmall {
+          font-size: 1.1em;
+        }
+      }
+
+    &--radio {
+      position: absolute;
+      
+      border: 0;
+
+      clip: rect(0 0 0 0);
+      width: 1px;      
+      height: 1px;
+      margin: -1px;
+      padding: 0;      
+      overflow: hidden;
+
+      &:checked + label {
+        background-color: $yellow;
+      }
+    }
+  }
+
+  .score {
+    font-family: $font-header;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align:center;
+  }
+
+  .correct {
+    text-align: center;
+  }
+
+  .answer {
+    padding-bottom: .5rem;
+
+    .num {
+      font-family: $font-header;
+      font-size: 1.1em;
+
+      padding-right: .5rem;
+    }
+
+    .icon-correct {
+      color: $yellow;
+
+      padding: 0 .5rem;
+    }
+
+    .icon-incorrect {
+      color: $red;
+      font-family: $font-header;
+      font-weight: bolder;
+
+      padding: 0 .5rem;
+    }
+
+    &-correct {
+      margin-left: 2.1rem;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

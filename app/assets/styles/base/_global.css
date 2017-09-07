@@ -1,0 +1,20 @@
+html {
+  height: 100%;
+
+  background-color: $gray-light;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-main;
+  height: 100%;
+}
+
+a {
+  color: $gray-dark;
+}
+
+.hidden {
+  display: none;
+}
